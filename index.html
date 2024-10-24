@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbar Real State - Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="branding">
+                <h1>Real Estate Agent</h1>
+                <!-- Logo Perusahaan -->
+                <img src="companylogo.png" alt="Company Logo" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Exclusive Home For College Student</h2>
+            <p>Transform your workspace with luxurious office setups that bring excitement and productivity, tailored just for you.</p>
+            <!-- Tombol Call to Action di hero section -->
+            <a href="tel:6282264170657" class="cta-button">Call Us Now</a>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for ofice type.....">
+                <button type="button" class="search-button" onclick="searchFunction()">Search</button>
+            </div>
+        </div>
+        </div>
+        <div class="hero-image">
+            <img src="rumah 4.jpg" alt="Luxurious Office Setup">
+        <div class="slide-container">
+            <img src="Rumah 1.jpg" alt="Office Setup 1" class="slide-image">
+            <img src="rumah 2.jpg" alt="Office Setup 2" class="slide-image">
+            <img src="rumah 3.jpg" alt="Office Setup 3" class="slide-image">
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-item">
+            <img src="afordableprice.jpg" alt="Affordable Pricing">
+            <h3>Affordable Pricing</h3>
+            <p>Get luxury at student-friendly prices.</p>
+            
+        </div>
+        <div class="feature-item">
+            <img src="luxury.jpg" alt="Quality Guaranteed">
+            <h3>Quality Guaranteed</h3>
+            <p>Top-notch office solutions that last.</p>
+        </div>
+        <div class="feature-item">
+            <img src="Fast Instalation.jpg" alt="Fast Installation">
+            <h3>Fast Installation</h3>
+            <p>Easy and quick setup for all purchases.</p>
+        </div>
+        <div class="feature-item">
+            <img src="247.jpg" alt="24/7 Support">
+            <h3>24/7 Support</h3>
+            <p>We're here to help anytime, anywhere.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Real Estate Agent. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-image');
+
+        function showSlides() {
+            slides.forEach(slide => {
+                slide.style.opacity = '0';
+            });
+
+            slideIndex++;
+            
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.opacity = '1';
+            setTimeout(showSlides, 5000);
+        }
+
+        showSlides();
+
+        function searchFunction() {
+            const query = document.getElementById('search').value;
+            alert("You searched for: " + query);
+            // Here, you could implement actual search functionality
+        }
+    </script>
+</body>
+</html>
